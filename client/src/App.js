@@ -110,7 +110,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                <button onClick={this.signOut}>Sign Out</button>
+                {this.state.signedIn ? <button onClick={this.signOut}>Sign Out</button> : ''}
                     <Switch>
                         <Route exact path="/signUp" render={SignUpLogInComponent}/>
                         <Route exact path="/posts" render={PostsComponent}/>
